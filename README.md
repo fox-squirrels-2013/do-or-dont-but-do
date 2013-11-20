@@ -28,3 +28,7 @@ today's goal:
   - subreddits
 - As a user I would like to sort all DoDonts by X (score, name, activity, popularity)
   - subreddits
+
+
+*note: the link below describes the markdown used in this document*
+https://help.github.com/articles/github-flavored-markdown
