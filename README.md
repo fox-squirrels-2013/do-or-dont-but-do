@@ -3,7 +3,7 @@
 1. As a user I would like to vote[do|dont] on a DoDonts
 2. As a user I would like to view all DoDonts as a list (default sort == TOTAL_SCORE)
 
-> TOTAL_SCORE = [dos].all(+1) & [donts].all(-1)
+> TOTAL_SCORE = `[dos].all(+1) & [donts].all(-1)`
 
 
 ```text
