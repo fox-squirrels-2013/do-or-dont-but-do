@@ -30,5 +30,5 @@ today's goal:
   - subreddits
 
 
-*note: the link below describes the markdown used in this document*
+*note: the link below describes the markdown used in this document*  
 https://help.github.com/articles/github-flavored-markdown
