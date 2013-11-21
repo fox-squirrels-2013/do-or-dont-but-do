@@ -1,5 +1,11 @@
+<!-- TODO: Add content type to model (and rollback, migrate, test:prepare) -->
+<!-- TODO: Add select dropdown box where people can choose type of their input -->
+<!-- TODO: Add AJAX call that gets instructions based on dropdown selection -->
+<!-- TODO: Add some form of validation for any given input type (could be a function in model that has a conditional that checks type, then does different things based on that) -->
+<!-- TODO: Add code that adds appropriate tags to user's input (e.g. img tag to image link) -->
+
 <h1>Create your own Dodont</h1>
-<p>Just place HTML markup in the box below.</p>
+
 <% if @error_messages %>
   <ul class="error_message_list">
   <% @error_messages.each do |message| %>
@@ -7,7 +13,14 @@
   <% end %>
   </ul>
 <% end %>
+
 <%= form_for @dodont, url: { action: "create" } do |f| %>
+  <p>
+    What kind of content would you like to create?
+  </p>
+  <p>
+    <%= # select element for content type %>
+  </p>
   <p>
     <%= f.label :content %>
     <%= f.text_field :content %>

@@ -1,4 +1,5 @@
 class Dodont < ActiveRecord::Base
+  belongs_to :category
   validates :content, presence: true
 
   def vote!(cmd)
