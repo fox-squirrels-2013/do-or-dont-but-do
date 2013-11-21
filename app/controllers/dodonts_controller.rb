@@ -1,15 +1,24 @@
 class DodontsController < ApplicationController
 
   def show
-    @dodont = Dodont.all.sample
+    session[:beenthere] ||= []
+    @dodont = Dodont.all.reject{|dd| session[:beenthere].include?(dd.id) }.sample
+
+    # replacing above with this would be cleaner but then the model would need to know about sessions
+    # @dodont = Dodont.not_yet_visited
+
+    unless @dodont.nil?
+      session[:beenthere] << @dodont.id
+      render :show
+    else
+      render :index
+    end
   end
 
   def update
-    p params
-    # {"_method"=>"put",
-    #  "command"=>"dont",
-    #  "id"=>"1"}
-    # here we want to use the data to update the model with the correct stuff
+    @dodont = Dodont.find(params[:id])
+    @dodont.vote!(params[:command])
+    @dodont.save
     redirect_to root_path
   end
 

@@ -1,8 +1,10 @@
-<%= link_to "don't!", dodont_path(@dodont.id, :command => :dont), :method => :put %>
+<h2><%= @dodont.content.html_safe %></h2>
 
+<%= link_to "don't!", dodont_path(@dodont.id, :command => :dont), :method => :put %><br>
+<%= @dodont.donts %><br>
 
-<%= link_to "do!", dodont_path(@dodont.id, :command => :do), :method => :put %>
-
+<%= link_to "do!", dodont_path(@dodont.id, :command => :do), :method => :put %><br>
+<%= @dodont.dos %>
 
 
 <%#= link_to "display list", dodonts_path %>
