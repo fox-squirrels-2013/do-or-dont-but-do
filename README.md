@@ -24,6 +24,7 @@ today's goal:
 - To push pg database to Heroku: `heroku pg:push do-or-dont-but-do_development HEROKU_POSTGRESQL_? --app do-or-dont-but-do`
   - where ? is the response from `heroku addons | grep POSTGRES`
 - use `git push heroku <my_branch>:master` to test my_branch on heroku
+- use `rspec spec` to run tests; open `coverage/index.html` to view the results from simplecov gem 
 
 ---
 
