@@ -1,0 +1,11 @@
+<h1>Create your own Dodont</h1>
+<p>Just place HTML markup in the box below.</p>
+<%= form_for @dodont, url: { action: "create" } do |f| %>
+  <p>
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+  </p>
+  <p>
+    <%= f.submit "Post" %>
+  </p>
+<% end %>
