@@ -11,6 +11,7 @@ class DodontsController < ApplicationController
       session[:beenthere] << @dodont.id
       render :show
     else
+      @dodonts = Dodont.all
       render :index
     end
   end
@@ -24,5 +25,6 @@ class DodontsController < ApplicationController
 
   def index
     @dodonts = Dodont.all
+    p @dodonts
   end
 end
