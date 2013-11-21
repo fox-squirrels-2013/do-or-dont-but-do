@@ -23,6 +23,7 @@ today's goal:
   - line in Procfile: `web: bundle exec rails server -p $PORT`
 - To push pg database to Heroku: `heroku pg:push do-or-dont-but-do_development HEROKU_POSTGRESQL_? --app do-or-dont-but-do`
   - where ? is the response from `heroku addons | grep POSTGRES`
+- use `git push heroku <my_branch>:master` to test my_branch on heroku
 
 ---
 
