@@ -36,10 +36,11 @@ class DodontsController < ApplicationController
     dodont = Dodont.new
     dodont.content = params[:dodont][:content]
     if dodont.save
-      redirect '/'
+      redirect_to '/'
     else
-      render new
-      # add error messages soon
+      @error_messages = dodont.errors.full_messages
+      @dodont = Dodont.new
+      render :new
     end
   end
 end
