@@ -3,6 +3,7 @@
 - [x] Set up 'new' and 'create' routes and controller actions, and 'new' view
 - [ ] Fix bug in which embedded YouTube videos added via /dodonts/new do not display on index page upon redirect
 - [ ] Style homepage
+- [ ] Style dodonts list
 - [ ] Style /dodonts/new
 - [ ] Sanitize guest input from /dodonts/new
 - [ ] Add registered users with registration and login routes/actions/views
