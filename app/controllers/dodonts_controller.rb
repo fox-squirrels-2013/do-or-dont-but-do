@@ -27,4 +27,19 @@ class DodontsController < ApplicationController
     @dodonts = Dodont.all
     p @dodonts
   end
+
+  def new
+    @dodont = Dodont.new
+  end
+
+  def create
+    dodont = Dodont.new
+    dodont.content = params[:dodont][:content]
+    if dodont.save
+      redirect '/'
+    else
+      render new
+      # add error messages soon
+    end
+  end
 end
