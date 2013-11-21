@@ -1,0 +1,6 @@
+<h1 id="title">Top Do-Donts</h1>
+<ul id="dodont_list">
+<% @dodonts.each do |dodont| %>
+  <li class="dodont_element"><%= dodont.content.html_safe %></li>
+<% end %>
+</ul>
