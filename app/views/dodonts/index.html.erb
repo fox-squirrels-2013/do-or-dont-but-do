@@ -1,7 +1,15 @@
 <h1 id="title">Top Do-Donts</h1>
 <ul id="dodont_list">
 <% @dodonts.each do |dodont| %>
-  <p><i class="fa fa-camera-retro"></i></p><li class="dodont_element effect"><%= dodont.content.html_safe %></li>
+  <li class="dodont_element">
+    <div class="voting">
+      <i class="fa fa-thumbs-o-up"></i><br>
+      <i class="fa fa-thumbs-o-down"></i>
+    </div>
+    <div class="effect">
+    <%= dodont.content.html_safe %>
+    </div>
+  </li>
 <% end %>
 </ul>
 

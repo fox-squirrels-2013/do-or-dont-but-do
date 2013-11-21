@@ -16,23 +16,49 @@ h1 {
   list-style: none;
   margin: 0 auto;
   padding-left: 5px;
-  width: 800px;
+  width: 90%;
+}
+
+.voting {
+  /*display: inline-block;*/
+  float: left;
+  /*background: green;*/
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.voting i {
+  font-size: 2em;
+  padding: 5px 0px;
+}
+
+.fa-thumbs-o-up:hover {
+  border-radius: 20px;
+  box-shadow: inset 0 0 10px #00ff00;
+}
+
+.fa-thumbs-o-down:hover {
+  border-radius: 20px;
+  box-shadow: inset 0 0 10px #ff0000;
 }
 
 .dodont_element {
-
+  clear: both;
   margin: 30px 5px;
   padding: 30px;
   border-radius: 15px;
   /*background-color: rgba(51, 65, 153,0.7);*/
 }
 
-.dodont_span {
-
-}
 
 .effect {
+  max-width: 80%;
+  /*display: inline-block;*/
   position: relative;
+  float: left;
+  min-width: 80%;
+  min-height: 80px;
+  padding: 10px 10px 5px 10px ;
 }
 .effect:before, .effect:after {
   content: "";
