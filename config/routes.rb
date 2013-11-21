@@ -3,4 +3,6 @@ DoOrDontButDo::Application.routes.draw do
 
   resources :dodonts, only: [:update, :show, :index, :new, :create]
 
+  resources :categories, only: [:show]
+
 end
