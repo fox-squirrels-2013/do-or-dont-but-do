@@ -1,7 +1,7 @@
 class DodontsController < ApplicationController
 
   def show
-    @dodont = Dodont.new(1, "sneaze on keyboard", 0, 0)
+    @dodont = Dodont.all.sample
   end
 
   def update
