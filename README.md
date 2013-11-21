@@ -19,6 +19,10 @@ today's goal:
 ## Notes
 
 - use `thin start` to run the web server if you want to hide the asset pipeline noise
+- may need to add `Procfile` to get Heroku working
+  - line in Procfile: `web: bundle exec rails server -p $PORT`
+- To push pg database to Heroku: `heroku pg:push do-or-dont-but-do_development HEROKU_POSTGRESQL_? --app do-or-dont-but-do`
+  - where ? is the response from `heroku addons | grep POSTGRES`
 
 ---
 
