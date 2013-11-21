@@ -9,6 +9,10 @@ feature "styling" do
     expect(page).to have_css('li')
  end
 end
+
+# feature "user" do
+#   scenario "the user can login on "
+
 # feature "User browsing the website"
 #   scenario "User visits Dodonts list from the homepage"
 #     dodont = Dodont.new
