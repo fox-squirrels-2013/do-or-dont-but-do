@@ -1,5 +1,6 @@
 ## Thursday, Nov 21 To-Dos
 
+- [x] Set up 'new' and 'create' routes and controller actions, and 'new' view
 - [ ] Fix bug in which embedded YouTube videos added via /dodonts/new do not display on index page upon redirect
 - [ ] Style homepage
 - [ ] Style /dodonts/new
