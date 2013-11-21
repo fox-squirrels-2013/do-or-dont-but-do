@@ -40,6 +40,9 @@ today's goal:
   - subreddits
 - As a user I would like to sort all DoDonts by X (score, name, activity, popularity)
   - subreddits
+- As a developer, I would like ot not keep having to delete cookies when working
+    on localhost:3000. This link may help implement this: 
+    http://railscasts.com/episodes/274-remember-me-reset-password?view=asciicast
 
 
 *note: the link below describes the markdown used in this document*
