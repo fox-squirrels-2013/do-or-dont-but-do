@@ -1,5 +1,10 @@
 body {
-  background-color: #E2FAFF;
+  background-color: #fff;
+}
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 5em;
 }
 
 #title {
@@ -15,8 +20,41 @@ body {
 }
 
 .dodont_element {
-  border: solid #334199 2px;
-  margin: 5px 0px;
-  padding: 5px;
+
+  margin: 30px 5px;
+  padding: 30px;
   border-radius: 15px;
+  /*background-color: rgba(51, 65, 153,0.7);*/
+}
+
+.dodont_span {
+
+}
+
+.effect {
+  position: relative;
+}
+.effect:before, .effect:after {
+  content: "";
+  position: absolute;
+}
+.effect:before {
+  border-radius: 10px;
+  top: -9px;
+  left: -9px;
+  right: -9px;
+  bottom: -9px;
+  background-image: -webkit-gradient(radial, left top, 10, 90% 0%, 150, from(#E2FAFF), to(transparent));
+  background-image: -webkit-radial-gradient(left top, 350px 70px, #E2FAFF, transparent);
+
+  z-index: -2;
+}
+.effect:after {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFF;
+  border-radius: 20px;
+  z-index: -1;
 }
