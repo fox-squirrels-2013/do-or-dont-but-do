@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe Dodont do
-  # let(:dodont) { DoDont.create(content: "Hi Hu" ) }
   it "default value of dos is set to 0" do
     dodont = Dodont.new
     dodont.content = "Hi Hu"
@@ -11,4 +10,5 @@ describe Dodont do
 
   it { should validate_presence_of(:content) }
 end
+
 

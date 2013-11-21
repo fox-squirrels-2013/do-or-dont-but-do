@@ -1,9 +1,3 @@
-##################################################################
-# this is a fake model for now
-#! REMOVE THIS LINE ASAP
-Dodont = Struct.new(:id, :content, :dos, :donts)
-##################################################################
-
 class DodontsController < ApplicationController
 
   def show
@@ -12,11 +6,14 @@ class DodontsController < ApplicationController
 
   def update
     p params
-    # {"_method"=>"put", 
-    #  "command"=>"dont", 
+    # {"_method"=>"put",
+    #  "command"=>"dont",
     #  "id"=>"1"}
     # here we want to use the data to update the model with the correct stuff
     redirect_to root_path
   end
 
+  def index
+    @dodonts = Dodont.all
+  end
 end
