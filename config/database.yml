@@ -16,7 +16,6 @@ development:
   adapter: postgresql
   database: do-or-dont-but-do_development
   pool: 5
-  # encoding: unicode
   # username: do-or-dont-but-do
   # password:
 
@@ -42,7 +41,6 @@ test:
   adapter: postgresql
   database: do-or-dont-but-do_test
   pool: 5
-  # encoding: unicode
   # username: do-or-dont-but-do
   # password:
 
