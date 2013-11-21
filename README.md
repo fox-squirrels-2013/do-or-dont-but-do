@@ -7,7 +7,7 @@
 
 
 ```text
-today's goal: 
+today's goal:
 - mvp stories
 - fully tested
 - attractively styled
@@ -22,7 +22,7 @@ today's goal:
 - As a user I would like to mark a DoDonts as a favorite
 - As a user I would like to vote on other DoDonts *[using weighted voting]*
 - As a user I would like to see my DoDonts
-- As a user I would like to see my voting history 
+- As a user I would like to see my voting history
 - As a user I would like to see my total points (algo?)
 - As a user I would like to organize all DoDonts by X (cohort, office, user type / status)
   - subreddits
@@ -30,5 +30,7 @@ today's goal:
   - subreddits
 
 
-*note: the link below describes the markdown used in this document*  
+*note: the link below describes the markdown used in this document*
 https://help.github.com/articles/github-flavored-markdown
+
+* css source frame effect http://css-tricks.com/examples/GradientBorder/
