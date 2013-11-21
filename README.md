@@ -16,6 +16,12 @@ today's goal:
 
 ---
 
+## Notes
+
+- use `thin start` to run the web server if you want to hide the asset pipeline noise
+
+---
+
 ## Backlog
 
 - As a user I would like to post a new DoDont
