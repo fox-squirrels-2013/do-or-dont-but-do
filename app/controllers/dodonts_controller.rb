@@ -38,8 +38,9 @@ class DodontsController < ApplicationController
     if dodont.save
       redirect_to '/'
     else
-      render new
-      # add error messages soon
+      @error_messages = dodont.errors.full_messages
+      @dodont = Dodont.new
+      render :new
     end
   end
 end
