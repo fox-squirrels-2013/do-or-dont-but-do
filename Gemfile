@@ -23,7 +23,6 @@ end
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
   gem "shoulda-matchers"
-  gem 'thin'
 end
 
 group :test do
@@ -32,6 +31,7 @@ group :test do
 end
 
 gem 'jquery-rails'
+gem 'thin'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
