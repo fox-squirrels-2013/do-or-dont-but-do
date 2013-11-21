@@ -1,9 +1,11 @@
 <h1>Create your own Dodont</h1>
 <p>Just place HTML markup in the box below.</p>
 <% if @error_messages %>
+  <ul class="error_message_list">
   <% @error_messages.each do |message| %>
-    <%= message %>
+    <li class="error_message"><%= message %></li>
   <% end %>
+  </ul>
 <% end %>
 <%= form_for @dodont, url: { action: "create" } do |f| %>
   <p>
