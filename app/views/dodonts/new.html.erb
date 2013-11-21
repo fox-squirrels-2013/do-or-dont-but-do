@@ -1,4 +1,3 @@
-<!-- TODO: Add content type to model (and rollback, migrate, test:prepare) -->
 <!-- TODO: Add select dropdown box where people can choose type of their input -->
 <!-- TODO: Add AJAX call that gets instructions based on dropdown selection -->
 <!-- TODO: Add some form of validation for any given input type (could be a function in model that has a conditional that checks type, then does different things based on that) -->
@@ -17,6 +16,7 @@
 <%= form_for @dodont, url: { action: "create" } do |f| %>
   <p>
     What kind of content would you like to create?
+    <%= collection_select(:dodont, :category_id, Category.all, :id, :name ) %>
   </p>
   <p>
     <%= # select element for content type %>
