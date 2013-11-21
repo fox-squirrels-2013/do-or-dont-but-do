@@ -9,6 +9,7 @@
 - [ ] Encrypt user passwords
 - [ ] Install simplecov gem
 - [ ] Add tests so that we achieve 100% coverage
+- [ ] Add global nav (or nav of some kind) to easily access Dodont listing (index) and creation form (new)
 
 ---
 
