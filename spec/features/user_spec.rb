@@ -2,8 +2,14 @@ require "spec_helper"
 
 feature "styling" do
   scenario "the page got styling" do
+    category = Category.new
+    category.name = 'my cat'
+    category.instructions = 'my inst'
+    category.save
+
     new_dodont = Dodont.new
     new_dodont.content = "Hey-o"
+    new_dodont.category = category
     new_dodont.save
     visit '/dodonts'
     expect(page).to have_css('li')

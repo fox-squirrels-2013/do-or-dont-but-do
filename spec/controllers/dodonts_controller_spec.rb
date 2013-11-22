@@ -3,8 +3,14 @@ require 'spec_helper'
 describe DodontsController, "basic routes and put/post testing: " do
 
   before(:all) do
+    @category = Category.new
+    @category.name = 'my cat'
+    @category.instructions = 'my inst'
+    @category.save
+
     @dodont = Dodont.new
     @dodont.content = "learn sublime shortcuts"
+    @dodont.category = @category
     @dodont.save
   end
 
@@ -29,12 +35,12 @@ describe DodontsController, "basic routes and put/post testing: " do
   end
 
   it "creates a new plain text dodont" do
-    params = { "dodont" => { "content" => "Hello1" }, "commit" => "Post" }
+    params = { "dodont" => { "content" => "Hello1", "category_id" => @category.id }, "commit" => "Post" }
     expect { post :create, params }.to change { Dodont.all.length }.by(1)
   end
 
   it "refuses to save a blank dodont to the table" do
-    params = { "dodont" => { "content" => "" }, "commit" => "Post" }
+    params = { "dodont" => { "content" => "", "category_id" => @category.id  }, "commit" => "Post" }
     expect { post :create, params }.to change { Dodont.all.length }.by(0)
   end
 
