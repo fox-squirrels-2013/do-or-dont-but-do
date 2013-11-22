@@ -15,4 +15,4 @@
 /tmp
 
 # Ignore simplcov files
-coverage
+coverage/

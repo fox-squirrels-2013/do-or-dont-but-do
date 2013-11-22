@@ -6,9 +6,6 @@ require 'spec_helper'
       expect(response).to render_template("new")
     end
 
-    # before :all do
-    #   params  = { name }
-
     it "creates new user"  do
       params = {"user" => {"name"=>"Ben", "email"=>"ben@test.de", "email_confirmation"=>"ben@test.de", "password"=>"1q1q1q1q", "password_confirmation"=>"1q1q1q1q"}}
 
@@ -26,6 +23,5 @@ require 'spec_helper'
 
       expect { post :create, params}.to change { User.all.length }.by(0)
     end
-
 
   end

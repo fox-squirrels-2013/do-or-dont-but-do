@@ -46,6 +46,14 @@ describe DodontsController, "basic routes and put/post testing: " do
 
 end
 
+describe DodontsController, "works when there are no dodonts" do
+  it "renders 'index' in show action" do
+    Dodont.destroy_all
+    get :show, id: nil
+    expect(response).to render_template("index")
+  end
+end
+
 describe DodontsController, "random sampling testing: " do
 
   before(:all) do
