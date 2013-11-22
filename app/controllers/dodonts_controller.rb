@@ -36,6 +36,8 @@ class DodontsController < ApplicationController
   def create
     dodont = Dodont.new
     dodont.content = params[:dodont][:content]
+    dodont.category_id = params[:dodont][:category_id]
+    p params # may want to remove this
     if dodont.save
       redirect_to '/'
     else

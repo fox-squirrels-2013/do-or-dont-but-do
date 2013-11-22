@@ -1,3 +1,10 @@
+> project metrics (leave this section at the top):
+
+[![Code Climate](https://codeclimate.com/github/fox-squirrels-2013/do-or-dont-but-do.png)](https://codeclimate.com/github/fox-squirrels-2013/do-or-dont-but-do)
+
+
+---
+
 ## Thursday, Nov 21 To-Dos
 
 - [x] Set up 'new' and 'create' routes and controller actions, and 'new' view
@@ -5,7 +12,7 @@
 - [ ] Style homepage
 - [ ] Style dodonts list
 - [ ] Style /dodonts/new
-- [ ] Sanitize guest input from /dodonts/new
+- [x] Sanitize guest input from /dodonts/new
 - [ ] Add registered users with registration and login routes/actions/views
 - [ ] Add user to sessions
 - [ ] Encrypt user passwords
@@ -32,6 +39,7 @@
 - To push pg database to Heroku: `heroku pg:push do-or-dont-but-do_development HEROKU_POSTGRESQL_? --app do-or-dont-but-do`
   - where ? is the response from `heroku addons | grep POSTGRES`
 - use `git push heroku <my_branch>:master` to test my_branch on heroku
+- use `rspec spec` to run tests; open `coverage/index.html` to view the results from simplecov gem 
 
 ---
 
@@ -47,6 +55,9 @@
   - subreddits
 - As a user I would like to sort all DoDonts by X (score, name, activity, popularity)
   - subreddits
+- As a developer, I would like ot not keep having to delete cookies when working
+    on localhost:3000. This link may help implement this: 
+    http://railscasts.com/episodes/274-remember-me-reset-password?view=asciicast
 
 
 *note: the link below describes the markdown used in this document*
