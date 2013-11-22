@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe DodontsController, "basic routes testing" do
+describe DodontsController, "basic routes and put/post testing: " do
 
   before(:all) do
     @dodont = Dodont.new
@@ -29,8 +29,32 @@ describe DodontsController, "basic routes testing" do
   end
 
   it "creates a new plain text dodont" do
-    params = { "dodont" => { "content"=>"Hello1" }, "commit"=>"Post" }
+    params = { "dodont" => { "content" => "Hello1" }, "commit" => "Post" }
     expect { post :create, params }.to change { Dodont.all.length }.by(1)
+  end
+
+  it "refuses to save a blank dodont to the table" do
+    params = { "dodont" => { "content" => "" }, "commit" => "Post" }
+    expect { post :create, params }.to change { Dodont.all.length }.by(0)
+  end
+
+end
+
+describe DodontsController, "random sampling testing: " do
+
+  before(:all) do
+    @dodont = Dodont.new
+    @dodont.content = "learn sublime shortcuts"
+    @dodont.save
+  end
+
+  it "creates a beenthere session if none exists" do
+    expect { get :show }.to change { session[:beenthere] }
+  end
+
+  it "changes the beenthere session after showing a dodont" do
+    session[:beenthere] = []
+    expect { get :show }.to change { session[:beenthere] }
   end
 
 end
