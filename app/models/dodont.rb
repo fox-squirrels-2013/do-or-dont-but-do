@@ -1,7 +1,8 @@
 class Dodont < ActiveRecord::Base
   belongs_to :category
   validates :content, :category_id, presence: true
-  # before_save :validate_by_category_type, :add_markup
+  validate :screen_for_markup
+  before_save :add_markup
 
   def vote!(cmd)
     if (cmd == "do")
@@ -19,18 +20,25 @@ class Dodont < ActiveRecord::Base
     self.donts += 1   
   end
 
-  # private
+  private
 
-  # def validate_by_category_type
-  #   if self.category_id == 1
-  #     puts 'looks like a image'
-  #   elsif self.category_id == 2
-  #     puts 'looks like a picture'
-  #   elsif self.category_id == 3
-  #     puts 'looks like a YouTube video'
-  # end
+  def screen_for_markup
+    if (self.content =~ /</) || (self.content =~ />/)
+      errors.add(:content, "cannot contain scripts or markup")
+    end
+  end
 
-  # def add_markup
-  # end
+  def add_markup
+    category_name = Category.find(self.category_id).name
+    if category_name.downcase == "image"
+      self.content = "<img src='" + self.content + "'>"
+    elsif category_name.downcase == "youtube video"
+      uri_ending = self.content.split('/')[-1]
+      if uri_ending =~ /watch\?v=/
+        uri_ending = uri_ending.split('=')[-1]
+      end
+      self.content = "<iframe width='300' height='169' src='//www.youtube.com/embed/" + uri_ending +"' frameborder='0' allowfullscreen></iframe>"
+    end
+  end
 
 end

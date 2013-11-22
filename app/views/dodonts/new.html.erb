@@ -1,15 +1,4 @@
-<!-- TODO: Add some form of validation for any given input type (could be a function in model that has a conditional that checks type, then does different things based on that). In event of plain text, do not allow tags of any kind -->
-<!-- TODO: Add code that adds appropriate tags to user's input (e.g. img tag to image link) -->
-
 <h1>Create your own Dodont</h1>
-
-<% if @error_messages %>
-  <ul class="error_message_list">
-  <% @error_messages.each do |message| %>
-    <li class="error_message"><%= message %></li>
-  <% end %>
-  </ul>
-<% end %>
 
 <%= form_for @dodont, url: { action: "create" } do |f| %>
   <p>
@@ -21,6 +10,15 @@
     <%= f.label :content %>
     <%= f.text_field :content %>
   </p>
+
+  <% if @error_messages %>
+    <ul class="error_message_list">
+    <% @error_messages.each do |message| %>
+      <li class="error_message"><%= message %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
   <p>
     <%= f.submit "Post" %>
   </p>
