@@ -7,6 +7,15 @@ h1 {
   font-size: 5em;
 }
 
+.image {
+  width: 400px;
+}
+
+.video {
+  width: 400px;
+  height: 225px;
+}
+
 #title {
   text-align: center;
   color: #334199;

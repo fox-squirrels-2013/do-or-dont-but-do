@@ -31,13 +31,13 @@ class Dodont < ActiveRecord::Base
   def add_markup
     category_name = Category.find(self.category_id).name
     if category_name.downcase == "image"
-      self.content = "<img width='400' src='" + self.content + "'>"
+      self.content = "<img class='image' src='" + self.content + "'>"
     elsif category_name.downcase == "youtube video"
       uri_ending = self.content.split('/')[-1]
       if uri_ending =~ /watch\?v=/
         uri_ending = uri_ending.split('=')[-1]
       end
-      self.content = "<iframe width='300' height='169' src='//www.youtube.com/embed/" + uri_ending +"' frameborder='0' allowfullscreen></iframe>"
+      self.content = "<iframe class='video' src='//www.youtube.com/embed/" + uri_ending +"' frameborder='0' allowfullscreen></iframe>"
     end
   end
 
