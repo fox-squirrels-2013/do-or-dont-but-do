@@ -26,7 +26,6 @@ class DodontsController < ApplicationController
   def index
 
     @dodonts = Dodont.all
-    p @dodonts
   end
 
   def new
@@ -37,7 +36,7 @@ class DodontsController < ApplicationController
     dodont = Dodont.new
     dodont.content = params[:dodont][:content]
     dodont.category_id = params[:dodont][:category_id]
-    p params # may want to remove this
+
     if dodont.save
       redirect_to '/'
     else
