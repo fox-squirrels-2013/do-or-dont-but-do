@@ -12,7 +12,7 @@
 - [ ] Style homepage
 - [ ] Style dodonts list
 - [ ] Style /dodonts/new
-- [ ] Sanitize guest input from /dodonts/new
+- [x] Sanitize guest input from /dodonts/new
 - [ ] Add registered users with registration and login routes/actions/views
 - [ ] Add user to sessions
 - [ ] Encrypt user passwords
