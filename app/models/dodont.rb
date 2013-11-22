@@ -31,7 +31,7 @@ class Dodont < ActiveRecord::Base
   def add_markup
     category_name = Category.find(self.category_id).name
     if category_name.downcase == "image"
-      self.content = "<img src='" + self.content + "'>"
+      self.content = "<img width='400' src='" + self.content + "'>"
     elsif category_name.downcase == "youtube video"
       uri_ending = self.content.split('/')[-1]
       if uri_ending =~ /watch\?v=/
