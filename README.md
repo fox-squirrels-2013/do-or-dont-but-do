@@ -8,14 +8,13 @@
 ## Friday, Nov 22 To-Dos
 
 ```text
-- [ ] Fix bug in which embedded YouTube videos added via /dodonts/new do not display on index page upon redirect
+- [ ] Fix issue #18
 - [ ] Style homepage
 - [ ] Style dodonts list
 - [ ] Style /dodonts/new
 - [ ] Add user to sessions
 - [ ] Encrypt user passwords
 - [ ] Add tests so that we achieve 100% coverage
-- [ ] Add global nav (or nav of some kind) to easily access Dodont listing (index) and creation form (new)
 - [ ] Install Disqus comments system
 - [ ] Global navigation
 - [ ] Enhance list page functionality
