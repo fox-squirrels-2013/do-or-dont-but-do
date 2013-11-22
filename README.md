@@ -1,6 +1,7 @@
 > project metrics (leave this section at the top):
 
-<img alt="Do-or-dont-but-do" height="18" src="https://d3s6mut3hikguw.cloudfront.net/github/fox-squirrels-2013/do-or-dont-but-do.png" style="position: relative; top: 4px" width="97">
+[![Code Climate](https://codeclimate.com/github/fox-squirrels-2013/do-or-dont-but-do.png)](https://codeclimate.com/github/fox-squirrels-2013/do-or-dont-but-do)
+
 
 ---
 
