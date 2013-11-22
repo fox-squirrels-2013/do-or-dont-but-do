@@ -1,18 +1,33 @@
-## MVP
+> project metrics (leave this section at the top):
+
+[![Code Climate](https://codeclimate.com/github/fox-squirrels-2013/do-or-dont-but-do.png)](https://codeclimate.com/github/fox-squirrels-2013/do-or-dont-but-do)
+
+
+---
+
+## Thursday, Nov 21 To-Dos
+
+- [x] Set up 'new' and 'create' routes and controller actions, and 'new' view
+- [ ] Fix bug in which embedded YouTube videos added via /dodonts/new do not display on index page upon redirect
+- [ ] Style homepage
+- [ ] Style dodonts list
+- [ ] Style /dodonts/new
+- [x] Sanitize guest input from /dodonts/new
+- [ ] Add registered users with registration and login routes/actions/views
+- [ ] Add user to sessions
+- [ ] Encrypt user passwords
+- [ ] Install simplecov gem
+- [ ] Add tests so that we achieve 100% coverage
+- [ ] Add global nav (or nav of some kind) to easily access Dodont listing (index) and creation form (new)
+
+---
+
+## MVP (done!)
 
 1. As a user I would like to vote[do|dont] on a DoDonts
 2. As a user I would like to view all DoDonts as a list (default sort == TOTAL_SCORE)
 
 > TOTAL_SCORE = `[dos].all(+1) & [donts].all(-1)`
-
-
-```text
-today's goal:
-- mvp stories
-- fully tested
-- attractively styled
-- deployed on heroku
-```
 
 ---
 
