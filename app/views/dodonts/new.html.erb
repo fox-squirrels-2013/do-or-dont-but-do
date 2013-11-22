@@ -1,17 +1,24 @@
 <h1>Create your own Dodont</h1>
-<p>Just place HTML markup in the box below.</p>
-<% if @error_messages %>
-  <ul class="error_message_list">
-  <% @error_messages.each do |message| %>
-    <li class="error_message"><%= message %></li>
-  <% end %>
-  </ul>
-<% end %>
+
 <%= form_for @dodont, url: { action: "create" } do |f| %>
+  <p>
+    What kind of content would you like to create?
+    <%= collection_select(:dodont, :category_id, Category.all, :id, :name) %>
+  </p>
+  <div id="instructions">Select your content type above, then insert your image/YouTube link or text below:</div>
   <p>
     <%= f.label :content %>
     <%= f.text_field :content %>
   </p>
+
+  <% if @error_messages %>
+    <ul class="error_message_list">
+    <% @error_messages.each do |message| %>
+      <li class="error_message"><%= message %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
   <p>
     <%= f.submit "Post" %>
   </p>
