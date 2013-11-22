@@ -24,6 +24,7 @@ class DodontsController < ApplicationController
   end
 
   def index
+
     @dodonts = Dodont.all
     p @dodonts
   end

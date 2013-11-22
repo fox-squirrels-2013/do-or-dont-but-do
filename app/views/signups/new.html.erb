@@ -1,0 +1,16 @@
+<h1>Sign up to start creating Dodonts!</h1>
+
+<%= form_for @user, url: {action: "create"}, html: {class: "signup-form"} do |f| %>
+  <%= label_tag(:name, "Name:") %>
+  <%= f.text_field :name %><br />
+  <%= label_tag(:email, "Email:") %>
+  <%= f.email_field :email %><br />
+  <%= label_tag(:email_confirmation, "Email confirmed:") %>
+  <%= f.email_field :email_confirmation %><br />
+  <%= label_tag(:password, "Password:") %>
+  <%= f.password_field :password %><br />
+  <%= label_tag(:password_confirmation, "Password confirmed:") %>
+  <%= f.password_field :password_confirmation %><br />
+
+  <%= f.submit "Sign up" %>
+<% end %>

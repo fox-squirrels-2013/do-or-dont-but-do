@@ -75,6 +75,13 @@ describe User do
           @user.save!
           }.to raise_error ActiveRecord::RecordInvalid
       end
+
+      it "should validate email confirmation" do
+        expect{
+          @user.email = 'abc'
+          @user.save!
+          }.to raise_error ActiveRecord::RecordInvalid
+      end
     end
   end
 
