@@ -5,20 +5,34 @@
 
 ---
 
-## Thursday, Nov 21 To-Dos
+## Friday, Nov 22 To-Dos
 
-- [x] Set up 'new' and 'create' routes and controller actions, and 'new' view
+```text
 - [ ] Fix bug in which embedded YouTube videos added via /dodonts/new do not display on index page upon redirect
 - [ ] Style homepage
 - [ ] Style dodonts list
 - [ ] Style /dodonts/new
-- [x] Sanitize guest input from /dodonts/new
-- [ ] Add registered users with registration and login routes/actions/views
 - [ ] Add user to sessions
 - [ ] Encrypt user passwords
-- [ ] Install simplecov gem
 - [ ] Add tests so that we achieve 100% coverage
 - [ ] Add global nav (or nav of some kind) to easily access Dodont listing (index) and creation form (new)
+- [ ] Install Disqus comments system
+- [ ] Global navigation
+- [ ] Enhance list page functionality
+- [ ] Omniauth
+- [ ] Mobile view CSS
+```
+
+---
+
+## Done
+
+```text
+- [x] Set up 'new' and 'create' routes and controller actions, and 'new' view
+- [x] Add registered users with registration and login routes/actions/views
+- [x] Sanitize guest input from /dodonts/new
+- [x] Install simplecov gem
+```
 
 ---
 
@@ -39,7 +53,7 @@
 - To push pg database to Heroku: `heroku pg:push do-or-dont-but-do_development HEROKU_POSTGRESQL_? --app do-or-dont-but-do`
   - where ? is the response from `heroku addons | grep POSTGRES`
 - use `git push heroku <my_branch>:master` to test my_branch on heroku
-- use `rspec spec` to run tests; open `coverage/index.html` to view the results from simplecov gem 
+- use `rspec spec` to run tests; open `coverage/index.html` to view the results from simplecov gem
 
 ---
 
@@ -56,7 +70,7 @@
 - As a user I would like to sort all DoDonts by X (score, name, activity, popularity)
   - subreddits
 - As a developer, I would like ot not keep having to delete cookies when working
-    on localhost:3000. This link may help implement this: 
+    on localhost:3000. This link may help implement this:
     http://railscasts.com/episodes/274-remember-me-reset-password?view=asciicast
 
 
