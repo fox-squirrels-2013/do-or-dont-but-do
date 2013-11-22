@@ -8,7 +8,6 @@ gem 'rails', '3.2.14'
 gem 'pg'
 gem 'font-awesome-rails'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -22,6 +21,7 @@ group :assets do
 end
 
 group :test, :development do
+  gem 'simplecov', :require => false
   gem "rspec-rails", "~> 2.0"
   gem "shoulda-matchers"
 end
