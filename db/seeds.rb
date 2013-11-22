@@ -12,7 +12,7 @@ text.instructions = "Enter your text into the box below:"
 text.save
 image = Category.new
 image.name = "Image"
-image.instructions = "Enter the YouTube Video's link into the text box below:"
+image.instructions = "Enter the image's link into the text box below:"
 image.save
 youtube_video = Category.new
 youtube_video.name ="YouTube Video"
