@@ -7,6 +7,12 @@ h1 {
   font-size: 5em;
 }
 
+h2 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3em;
+}
+
+
 .image {
   width: 400px;
 }
