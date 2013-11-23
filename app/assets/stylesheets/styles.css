@@ -1,3 +1,22 @@
+header {
+  text-align: center;
+}
+
+ul {
+  /*display: inline;*/
+  padding: 10px;
+  background-color: red;
+  margin-top: 200px;
+  list-style: none;
+}
+
+li {
+/*  display: inline;  */
+  padding: 0px 10px 0px 10px;
+  background-color: green;
+  float: left;
+}
+
 body {
   background-color: #fff;
 }
@@ -98,4 +117,9 @@ h2 {
   background: #FFF;
   border-radius: 20px;
   z-index: -1;
+}
+
+.effect div{
+  display: inline-block;
+/*  padding: 20px; putting this here pads the whole dodont */
 }

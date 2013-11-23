@@ -8,7 +8,7 @@ class DodontsController < ApplicationController
     # @dodont = Dodont.not_yet_visited
 
     unless @dodont.nil?
-      session[:beenthere] << @dodont.id
+      # session[:beenthere] << @dodont.id
       render :show
     else
       @dodonts = Dodont.all

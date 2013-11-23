@@ -1,15 +1,21 @@
 <h2 id="title">Do -or- Don't (or Do!)</h2>
+
 <ul class="dodont_element">
-<div class="effect">
-  <%= @dodont.content.html_safe %>
-</div>
 
-<%= link_to " don't!", dodont_path(@dodont.id, :command => :dont), :method => :put, :class => "fa fa-thumbs-o-down" %>
-<!-- <%= @dodont.donts %> -->
-<br>
+  <div class="effect">
+  
+    <%= @dodont.content.html_safe %>
+    <div>
+    <%= link_to " don't!", dodont_path(@dodont.id, :command => :dont), :method => :put, :class => "fa fa-thumbs-o-down" %>
+    <!-- <%= @dodont.donts %> -->
+    <br>
 
-<%= link_to " do!", dodont_path(@dodont.id, :command => :do), :method => :put, :class => "fa fa-thumbs-o-up" %>
-<!-- <%= @dodont.dos %> -->
+    <%= link_to " do!", dodont_path(@dodont.id, :command => :do), :method => :put, :class => "fa fa-thumbs-o-up" %>
+    <!-- <%= @dodont.dos %> -->
+    </div>
+  </div>
+
+
 </ul>
 
 <%#= link_to "display list", dodonts_path %>
