@@ -1,12 +1,16 @@
 require 'spec_helper'
 
 describe User do
+
   before :each do
     @user = User.new
     @user.name = 'Beni'
     @user.password = '123'
     @user.email = 'b@g.com'
   end
+
+  it { should have_many(:dodonts).through(:votes)}
+
 
   context "model" do
     it "should be an instance of the User class" do
@@ -33,6 +37,12 @@ describe User do
     it "should find a record in the database" do
       expect(User.find(@user.id)).to be_an_instance_of User
     end
+
+    
+
+    
+
+    
 
   end
 

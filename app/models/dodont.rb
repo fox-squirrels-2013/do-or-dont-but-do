@@ -1,4 +1,7 @@
 class Dodont < ActiveRecord::Base
+  has_many :votes
+  has_many :users, through: :votes
+
   belongs_to :category
   validates :content, :category_id, presence: true
   validate :screen_for_markup

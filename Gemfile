@@ -30,6 +30,7 @@ end
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'awesome_print'
 end
 
 gem 'jquery-rails'

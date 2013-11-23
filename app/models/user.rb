@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :votes
+  has_many :dodonts, through: :votes
   validates :name, :password, :email, presence: true
   validates :email, uniqueness: true
   validate :email_is_of_valid_format

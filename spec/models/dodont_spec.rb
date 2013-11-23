@@ -9,6 +9,8 @@ describe Dodont do
   end
 
   it { should validate_presence_of(:content) }
+  it { should have_many(:users).through(:votes) }
+
 end
 
 
