@@ -7,6 +7,8 @@ class Dodont < ActiveRecord::Base
   validate :screen_for_markup
   before_save :add_markup
 
+  attr_accessible :content, :category_id
+
   def vote!(cmd)
     if (cmd == "do")
       self.do!
